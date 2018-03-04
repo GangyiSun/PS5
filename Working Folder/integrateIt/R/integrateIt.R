@@ -32,11 +32,64 @@ setGeneric(name="integrateIt",
 #' @export
 setMethod(f="integrateIt",
           definition=function(x, y, domain, rule, ...){
-            if (rule=='Trap'){
-              return(new("Trapezoid", x=x, y=y, area=2))
+            xStart<-FALSE
+            j=0
+            while (xStart==FALSE){
+              j=j+1
+              if (x[j]==domain[1]){
+                xStart<-TRUE
+              }
             }
+            
+            xEnd<-FALSE
+            k=0
+            while (xEnd==FALSE){
+              k=k+1
+              if (x[k]==domain[2]){
+                xEnd<-TRUE
+              }
+            }
+            
+            xCalc<-c()
+            yCalc<-c()
+            for (i in j:k){
+              xCalc=c(xCalc, x[i])
+              yCalc=c(yCalc, y[i])
+            }
+            n<-length(xCalc)
+            h<-(domain[2]-domain[1])/n
+            
+            if (rule=='Trap'){
+              sum=0
+              for (i in 1:n){
+                if (i==1|i==n) {
+                  sum<-sum+yCalc[i]
+                } 
+                else {
+                  sum<-sum+2*yCalc[i]
+                }
+              }
+              t<-(h/2)*sum
+              return(new("Trapezoid", x=x, y=y, area=t))
+            }
+            
             if (rule=='Simpson'){
-              return(new("Simpson", x=x, y=y, area=2))
+              sum=0
+              for (i in 1:n){
+                if (i==1|i==n){
+                  sum<-sum+yCalc[i]
+                } 
+                else {
+                  if (i%%2==0){
+                    sum<-sum+4*yCalc[i]
+                  }
+                  if (i%%2==1){
+                    sum<-sum+2*yCalc[i]
+                  }
+                }
+              }
+              s<-(h/3)*sum
+              return(new("Simpson", x=x, y=y, area=s))
             }
           }
 )
