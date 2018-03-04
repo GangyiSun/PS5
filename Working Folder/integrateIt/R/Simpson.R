@@ -34,3 +34,34 @@ setMethod("initialize", "Simpson",
             return(value)
           }
 ) 
+
+setValidity("Simpson", function(object){
+  test1<-(length(x)==length(y))
+  test2<-any(duplicated(x))
+  if(test1!=TRUE){return("Size of vector x and vector y are not the same.")}
+  if(test2==TRUE){return("Vector x contains repeated values, which is not allowed.")}
+}
+)
+
+#' #' @rdname Simpson
+#' #' @export 
+#' setGeneric("getArea",
+#'            function(object="Simpson")  {
+#'              standardGeneric("getArea")
+#'            }
+#' )
+#' 
+#' #' @export
+#' setMethod("getArea", "Simpson",
+#'           function(object){ 
+#'             return(object@area)
+#'           }
+#' )
+
+#' @rdname Simpson
+#' @export
+setMethod("print", "Simpson",
+          function(x, ...){
+            return(x@area)
+          }
+)

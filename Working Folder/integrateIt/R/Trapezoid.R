@@ -35,6 +35,14 @@ setMethod("initialize", "Trapezoid",
           }
 ) 
 
+setValidity("Trapezoid", function(object){
+  test1<-(length(x)==length(y))
+  test2<-any(duplicated(x))
+  if(test1!=TRUE){return("Size of vector x and vector y are not the same.")}
+  if(test2==TRUE){return("Vector x contains repeated values, which is not allowed.")}
+}
+)
+
 #' @rdname Trapezoid
 #' @export 
 setGeneric("getArea",
@@ -49,3 +57,13 @@ setMethod("getArea", "Trapezoid",
             return(object@area)
           }
 )
+
+
+#' @rdname Trapezoid
+#' @export
+setMethod("print", "Trapezoid",
+          function(x, ...){
+            return(x@area)
+          }
+)
+

@@ -17,10 +17,10 @@ integrateIt(x, y, domain, rule, ...)
 \item{rule}{Either "Trap" or "Simpson", indicating the integration method to be used.}
 }
 \value{
-the values of x, the values of y, and an object of class Trapezoid or Simpson containing:
+An object of class Trapezoid or Simpson containing:
  \item{x}{a vector of x values}
  \item{y}{a vector of y values}
- \item{area}{area under curve defined by x and y, calculated using the trapezoid method}
+ \item{area}{area under curve defined by x and y, calculated using the indicated method}
 }
 \description{
 Finds the area under a curve given 2 vectors

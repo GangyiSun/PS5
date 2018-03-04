@@ -5,9 +5,12 @@
 \alias{Trapezoid-class}
 \alias{initialize,Trapezoid-method}
 \alias{getArea}
+\alias{print,Trapezoid-method}
 \title{A Trapezoid object}
 \usage{
 getArea(object = "Trapezoid")
+
+\S4method{print}{Trapezoid}(x, ...)
 }
 \description{
 Object of class \code{Trapezoid} is created by the \code{integrateIt} function

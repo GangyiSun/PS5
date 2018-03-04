@@ -4,9 +4,20 @@
 \name{Simpson-class}
 \alias{Simpson-class}
 \alias{initialize,Simpson-method}
+\alias{print,Simpson-method}
 \title{A Simpson object}
+\usage{
+\S4method{print}{Simpson}(x, ...)
+}
 \description{
 Object of class \code{Simpson} is created by the \code{integrateIt} function
+
+#' @export
+setMethod("getArea", "Simpson",
+          function(object){ 
+            return(object@area)
+          }
+)
 }
 \details{
 An object of the class `Simpson' has the following slots:

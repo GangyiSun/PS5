@@ -7,10 +7,10 @@
 #' @param domain A vector of size 2, indicating starting and ending values. 
 #' @param rule Either "Trap" or "Simpson", indicating the integration method to be used. 
 #'
-#' @return the values of x, the values of y, and an object of class Trapezoid or Simpson containing:
+#' @return An object of class Trapezoid or Simpson containing:
 #'  \item{x}{a vector of x values}
 #'  \item{y}{a vector of y values}
-#'  \item{area}{area under curve defined by x and y, calculated using the trapezoid method}
+#'  \item{area}{area under curve defined by x and y, calculated using the indicated method}
 #' @author Gangyi Sun
 #' @note This is a very simple function
 #' @examples
