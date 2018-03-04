@@ -1,7 +1,6 @@
 #' A Simpson object
 #' 
-#' Object of class \code{Simpson} is created by the \code{integrateIt} and \code{print} functions
-#'
+#' Object of class \code{Simpson} is created by the \code{integrateIt} function
 #' 
 #' An object of the class `Simpson' has the following slots:
 #' \itemize{
@@ -29,24 +28,9 @@ setClass(Class="Simpson",
 )
 
 #' @export
-setMethod("initialize", "Simspon", 
+setMethod("initialize", "Simpson", 
           function(.Object, ...){
             value=callNextMethod()
             return(value)
           }
 ) 
-
-#' @rdname Simpson
-#' @export 
-setGeneric("getArea",
-           function(object="Simpson")  {
-             standardGeneric("getArea")
-           }
-)
-
-#' @export
-setMethod("getArea", "Simpson",
-          function(object){ 
-            return(object@area)
-          }
-)

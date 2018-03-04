@@ -1,0 +1,17 @@
+Package: integrateIt
+Title: Integrating curves 
+Version: 0.1
+Author: Gangyi Sun
+Maintainer: Gangyi Sun <gangyi.sun@wustl.edu>
+Description: Finding the area under curves using Trapezoid and Simpson methods
+Depends: 
+	R (>= 3.0.0),
+	methods
+License: GPL (>=2)
+Suggest:
+	devtools
+Collage: 
+	'Trapezoid.R'
+	'Simpson.R'
+	'integrateIt.R'
+RoxygenNote: 6.0.1

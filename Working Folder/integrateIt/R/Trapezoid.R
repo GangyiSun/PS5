@@ -1,8 +1,7 @@
 #' A Trapezoid object
 #' 
-#' Object of class \code{Trapezoid} is created by the \code{integrateIt} and \code{print} functions
+#' Object of class \code{Trapezoid} is created by the \code{integrateIt} function
 #'
-#' 
 #' An object of the class `Trapezoid' has the following slots:
 #' \itemize{
 #' \item \code{x} a vector of x values
