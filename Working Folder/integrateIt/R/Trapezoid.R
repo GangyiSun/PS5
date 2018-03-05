@@ -9,7 +9,7 @@
 #' \item \code{area} area under curve defined by x and y, calculated using the trapezoid method 
 #' }
 #'
-#' @author Gangyi Sun: \email{gangyi.sun@wustl.edu}
+#' @author Gangyi Sun: \email{gangyi.sun@@wustl.edu}
 #' @aliases Trapezoid-class initialize,Trapezoid-method 
 #' 
 #' @rdname Trapezoid

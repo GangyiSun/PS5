@@ -14,7 +14,7 @@ Object of class \code{Simpson} is created by the \code{integrateIt} function
 
 #' @export
 setMethod("getArea", "Simpson",
-          function(object){ 
+          function(object){
             return(object@area)
           }
 )

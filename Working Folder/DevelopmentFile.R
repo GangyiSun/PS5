@@ -4,12 +4,13 @@ library(testthat)
 
 setwd("~/Documents/GitHub/PS5/Working Folder")
 
+# Only run this the first time to create the skeleton of the package 
+# devtools::create("integrateIt")
+
 current.code <- as.package("integrateIt")
 load_all(current.code)
 document(current.code)
 check(current.code)
-# checking DESCRIPTION meta-information ... ERROR
-# is this a problem?
 
 # Test Code
 x<-c(1,2,3,4,5,6,7,8,9)

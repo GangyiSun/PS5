@@ -9,7 +9,7 @@
 #' \item \code{area} area under curve defined by x and y, calculated using the simpsons method 
 #' }
 #'
-#' @author Gangyi Sun: \email{gangyi.sun@wustl.edu}
+#' @author Gangyi Sun: \email{gangyi.sun@@wustl.edu}
 #' @aliases Simpson-class initialize,Simpson-method 
 #' 
 #' @rdname Simpson
@@ -44,7 +44,7 @@ setValidity("Simpson", function(object){
 )
 
 #' #' @rdname Simpson
-#' #' @export 
+#' #' @export
 #' setGeneric("getArea",
 #'            function(object="Simpson")  {
 #'              standardGeneric("getArea")
@@ -53,7 +53,7 @@ setValidity("Simpson", function(object){
 #' 
 #' #' @export
 #' setMethod("getArea", "Simpson",
-#'           function(object){ 
+#'           function(object){
 #'             return(object@area)
 #'           }
 #' )
