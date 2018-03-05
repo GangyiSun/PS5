@@ -12,11 +12,19 @@
 \description{
 Object of class \code{Simpson} is created by the \code{integrateIt} function
 
+# getArea method for class Simpson
+#' @rdname Simpson
+#' @export
+setGeneric("getArea",
+           function(object="Simpson"){
+             standardGeneric("getArea")
+             }
+)
 #' @export
 setMethod("getArea", "Simpson",
           function(object){
             return(object@area)
-          }
+            }
 )
 }
 \details{
@@ -24,7 +32,7 @@ An object of the class `Simpson' has the following slots:
 \itemize{
 \item \code{x} a vector of x values
 \item \code{y} a vector of y values
-\item \code{area} area under curve defined by x and y, calculated using the simpsons method 
+\item \code{area} area under curve defined by x and y, calculated using the simpsons method
 }
 }
 \author{

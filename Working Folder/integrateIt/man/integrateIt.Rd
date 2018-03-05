@@ -30,7 +30,7 @@ This is a very simple function
 }
 \examples{
 
-myX <- c(3,4,5) 
+myX <- c(3,4,5)
 myY <- c(1,2,3)
 myDomain <- c(3,5)
 integrateIt(myX, myY,myDomain,Trap)
