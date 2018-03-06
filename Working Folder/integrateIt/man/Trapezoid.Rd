@@ -4,11 +4,11 @@
 \name{Trapezoid-class}
 \alias{Trapezoid-class}
 \alias{initialize,Trapezoid-method}
-\alias{getArea}
+\alias{getArea,Trapezoid-method}
 \alias{print,Trapezoid-method}
 \title{A Trapezoid object}
 \usage{
-getArea(object = "Trapezoid")
+\S4method{getArea}{Trapezoid}(object)
 
 \S4method{print}{Trapezoid}(x, ...)
 }

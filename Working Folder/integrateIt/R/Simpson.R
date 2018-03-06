@@ -48,20 +48,20 @@ setValidity("Simpson", function(object){
 }
 )
 
-#' # getArea method for class Simpson
-#' #' @rdname Simpson
-#' #' @export
-#' setGeneric("getArea",
-#'            function(object="Simpson"){
-#'              standardGeneric("getArea")
-#'              }
-#' )
-#' #' @export
-#' setMethod("getArea", "Simpson",
-#'           function(object){
-#'             return(object@area)
-#'             }
-#' )
+# getArea generic and method for class Simpson
+#' @rdname Simpson
+#' @export
+setGeneric("getArea",
+           function(object){
+             standardGeneric("getArea")
+             }
+)
+#' @export
+setMethod("getArea", "Simpson",
+          function(object){
+            return(object@area)
+            }
+)
 
 # Print method for class Simspon
 #' @rdname Simpson

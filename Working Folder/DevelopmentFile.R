@@ -34,7 +34,7 @@ testSimpson
 print(testTrapezoid)
 print(testSimpson)
 getArea(testTrapezoid)
-## getArea(testSimpson)
+getArea(testSimpson)
 
 ## Intentional mistakes to test error messages
 # sizes of vetor x and vector y are not the same 

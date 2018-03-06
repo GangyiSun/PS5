@@ -48,14 +48,8 @@ setValidity("Trapezoid", function(object){
 }
 )
 
-# getArea method for class Trapezoid
+# getArea method for class Trapezoid, generic defined in class Simpson
 #' @rdname Trapezoid
-#' @export
-setGeneric("getArea",
-           function(object="Trapezoid")  {
-             standardGeneric("getArea")
-           }
-)
 #' @export
 setMethod("getArea", "Trapezoid",
           function(object){

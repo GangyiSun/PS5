@@ -4,28 +4,16 @@
 \name{Simpson-class}
 \alias{Simpson-class}
 \alias{initialize,Simpson-method}
+\alias{getArea}
 \alias{print,Simpson-method}
 \title{A Simpson object}
 \usage{
+getArea(object)
+
 \S4method{print}{Simpson}(x, ...)
 }
 \description{
 Object of class \code{Simpson} is created by the \code{integrateIt} function
-
-# getArea method for class Simpson
-#' @rdname Simpson
-#' @export
-setGeneric("getArea",
-           function(object="Simpson"){
-             standardGeneric("getArea")
-             }
-)
-#' @export
-setMethod("getArea", "Simpson",
-          function(object){
-            return(object@area)
-            }
-)
 }
 \details{
 An object of the class `Simpson' has the following slots:
